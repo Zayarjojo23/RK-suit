@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Details</title>
+    <!--bootstrap--> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <!--for icon bootstrap--> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!--my indexStyle css link--> <link rel="stylesheet" href="indexStyle.css">
+
+    <!--google fonts for mainphoto--> <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+
+
+</head>
+<body class="paymentBody">
+
+<!--Payment page -->
+<div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="card">
+          <div class="card-header">
+            <h3 id="payment">Payment Details</h3>
+          </div>
+          <div class="card-body">
+            <form id="paymentForm">
+              <div class="form-group py-3">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" placeholder="Username">
+              </div>
+              <div class="form-group py-3">
+                <label for="cardNumber">Card Number</label>
+                <input type="text" class="form-control" id="cardNumber" placeholder="Card Number" maxlength="16">
+              </div>
+              <div class="form-group py-3">
+                <label for="totalPrice">Total Price</label>
+                <div class="" id="payMentPrice">
+                  $ 00
+                </div>
+              </div>
+              <div class="form row">
+                <div class="col">
+                  <label for="expirationDate">Expiration Date (MM/YY)</label>
+                  <input type="text" class="form-control" id="expirationDate" placeholder="MM/YY" maxlength="5">
+                </div>
+                <div class="col">
+                  <label for="cvv">CVV</label>
+                  <input type="text" class="form-control" id="cvv" placeholder="CVV" maxlength="3">
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <label for="paymentMethod">Payment Method</label>
+                <div class= " d-flex flex-row payment-icons">
+                  <img width="15%" src="kbz_0.png" alt="" style="margin-right: 20px;">
+                  <img width="15%" src="cbpay.png" alt="" style="margin-right: 20px;">
+                  <img width="15%" src="Wave-Money_land.png" alt="" style="margin-right: 20px;">
+                </div>
+              </div>
+              
+              <input onclick="thanks()" type="submit" value="Submit" class="w-100 btn btn-dark mt-4" id="submitButton">
+              
+              
+               <!--Home Button-->
+              <a class="myPaymentA" href="index.html">
+               <i class="bi bi-house-heart" style="font-size: x-large;"></i>
+              </a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<script >
+  // for loader
+      window.addEventListener("load", ()=> {
+          document.querySelector(".loading").classList.add("d-none")
+      })
+  </script>
+  <script src="script.js"></script>
+  <script>
+    document.getElementById('paymentForm').addEventListener('submit', function(event) {
+      event.preventDefault(); 
+      window.location.href = 'index.html';
+    });
+
+    // for payment price 
+    let payMentPrice = document.getElementById('payMentPrice');
+    payMentPrice.textContent = "$ "+ localStorage.getItem('priceDisplay');
+    function thanks(){
+      alert('Thanks for shopping with us');
+    }
+  </script>
+</body>
+</html>

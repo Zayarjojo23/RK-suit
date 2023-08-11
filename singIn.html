@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Singin Page</title>
+
+    <!--bootstrap--> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <!--for icon bootstrap--> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!--my indexStyle css link--> <link rel="stylesheet" href="indexStyle.css">
+
+    <!--google fonts for mainphoto--> <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!--navbar-->
+    <div class="navbar position-sticky top-0 bg-white w-100 mynav ">
+        <div class="container justify-content-around">
+
+            <!-- for PC size-->
+            <div class="d-none d-lg-flex w-100 row ">
+
+                <div class="col-lg-2 ownlogo">
+                    <h1>FashionGit</h1>
+                </div>
+
+                <div class="col-lg-7  ">
+                    <ul class="d-flex justify-content-around  align-items-center">
+                        <li>
+                            <div class="nav-item dropdown"> <!--This is for home button-->
+                                <a class="dropbtn" href="index.html">Home</a>
+                                <div class="dropdown-content">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dropdown nav-item">  <!--This is suit dropdown button-->
+                                <a class="dropbtn" href="suitPage.html">Suits</a>
+                                <div class="dropdown-content ">
+                                  
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dropdown nav-item">  <!--This is shirt dropdown button-->
+                                <a class="dropbtn" href="shirtPageF.html">Shirts</a>
+                                <div class="dropdown-content ">
+                                  
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dropdown nav-item">  <!--This is pant dropdwon button-->
+                                <a class="dropbtn" href="pantPageF.html">Pants</a>
+                                <div class="dropdown-content">
+                                  
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="nav-item dropdown"> <!--This is login button-->
+                                <a class="dropbtn" href="singIn.html">Login</a>
+                                <div class="dropdown-content">
+                                </div>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 pt-3"> <!--This is for search box-->
+                    <div class="mySearchbox p-2 rounded-5 my-2 d-flex justify-content-center border border-dark bg-white ">
+                        <input class="w-100 mx-2 border-0 focus-visible"  type="text">
+                        <i class="bi bi-search mySearchIcon"></i>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- for mobile menu -->
+            <div class="menu d-flex w-100">
+                <div class=" d-lg-none col-6 mx-5 ownlogo">
+                    <h1>FashionGit</h1>
+                </div>
+                <button class="col-1 d-lg-none btn btn-outline-dark d-flex justify-content-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+                    <i class="bi bi-three-dots-vertical fs-3 "></i>
+                </button>
+            </div>
+
+            <!--offcanvus-->
+            <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+                <div class="offcanvas-header ownlogo">
+                    <h5 class="offcanvas-title" id="offcanvasTopLabel">FashionGit</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="w-100">
+                        <ul class= "row w-100 d-flex justify-content-around  align-items-center">
+                            <li >
+                                <div class="drop  d-flex justify-content-center nav-item">
+                                    <a class="dropbtn w-75" href="index.html">Home</a>
+                                    <div class="dropdown-content">
+                              
+                                    </div>
+                                  </div>
+                            </li>
+                            <li>
+                                <div class="drop  d-flex justify-content-center nav-item">  <!--This is suit dropdown button-->
+                                    <a class="dropbtn w-75" href="suitPage.html">Suits</a>
+                                    <div class="dropdown-content ">
+                                      
+                                     
+                                    </div>
+                                  </div>
+                            </li>
+                            <li>
+                                <div class="drop  d-flex justify-content-center nav-item">  <!--This is shirt dropdown button-->
+                                    <a class="dropbtn w-75" href="shirtPageF.html">Shirts</a>
+                                    <div class="dropdown-content">
+                                      
+                                      
+                                    </div>
+                                  </div>
+                            </li>
+                            <li>
+                                <div class="drop  d-flex justify-content-center nav-item">  <!--This is pant dropdwon button-->
+                                    <a class="dropbtn w-75" href="pantPageF.html">Pants</a>
+                                    <div class="dropdown-content">
+                                      
+                                    </div>
+                                  </div>
+                            </li>
+                            <li>
+                                <div class="drop  d-flex justify-content-center nav-item ">  <!--This is login button-->
+                                    <a class="dropbtn w-75" href="singIn.html">Login</a>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 ">
+                        <div class="mySearchbox p-2 rounded-5 d-flex justify-content-center border border-dark bg-white ">
+                            <input class="w-100 mx-2 border-0 focus-visible"  type="text">
+                            <i class="bi bi-search mySearchIcon"></i>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="singinBody"> <!--This is for singin box in the page-->
+      <div class="container mySinginContainer">
+        <h2 class="fw-bold my-5">Login</h2>
+        <form>
+          <div class="input-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+          </div>
+          <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+          </div>
+          <div class="container display-flat ">
+            <div class="d-flex justify-content-between">
+                <button type="submit" style="margin-bottom: 15px; width: 30%;
+                 padding: 5px; border-radius: 5px;">Login</button>
+                 <a href="forget.html">forget account?</a>
+            </div>
+            <div>
+                
+            </div>
+          </div>
+        </form>
+        <div class="mySinginCreate">
+          <a class="btn-create-account w-100" href="singUp.html">Create Account</a>
+        </div>
+        
+      </div>
+    </div>
+  
+
+    <div class="footer" style="margin-top: 10px;"> <!-- This is the footer section -->
+      <footer class="main-footer">
+        <div class="footer-content row ">
+            <div class="company-info ">
+                <h3>FashionGit</h3>
+                <p>Address: 123 Main Street, City, Country</p>
+                <p>Phone: +21mx-1 123-456-7890</p>
+                <p>Email: fashiongit@company.com</p>
+            </div>
+
+        
+
+            <div class="social-media    ">
+                <h3>Follow Us</h3>
+                <ul>
+                    <div class="container-fluid d-flex w-100">
+                        <div class="px-3">
+                            <div>
+                                <i class="bi bi-facebook myFISize"></i>
+                            </div>
+                            <div>
+                                <i class="bi bi-twitter myFISize"></i>
+                            </div>
+                        </div>
+                        <div class="px-3">
+                            <div>
+                                <i class="bi bi-instagram myFISize"></i>
+                            </div>
+                            <div>
+                                <i class="bi bi-youtube myFISize"></i>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2023 Company Name. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+
+    
+</body>
+
+<!--bootstrap script-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</html>
